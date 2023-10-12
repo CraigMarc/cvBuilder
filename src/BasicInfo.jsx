@@ -1,26 +1,17 @@
 import React, { useState } from "react";
 
-function BasicInfo() {
-    const [name, setName] = useState('');
-    const [email, setEmail] = useState('');
-    const [phone, setPhone] = useState('');
-    const [address, setAddress] = useState('');
-
-    function handleNameChange(e) {
-        setName(e.target.value);
-    }
-
-    function handleEmailChange(e) {
-        setEmail(e.target.value);
-    }
-
-    function handlePhoneChange(e) {
-        setPhone(e.target.value);
-    }
-
-    function handleAddressChange(e) {
-        setAddress(e.target.value);
-    }
+function BasicInfo(props) {
+    const {
+        phone,
+        address,
+        email,
+        name,
+        handleNameChange,
+        handleEmailChange,
+        handlePhoneChange,
+        handleAddressChange,
+        
+      } = props;
 
 
     return (
@@ -57,13 +48,6 @@ function BasicInfo() {
                 />
             </label>
 
-
-            <p>
-                Name: <b>{name}</b>
-                Email: <b>{email}</b>
-                Phone: <b>{phone}</b>
-                Address: <b>{address}</b>
-            </p>
         </>
     );
 }
