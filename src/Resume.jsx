@@ -22,7 +22,12 @@ let schoolName = schoolData.schoolName
 </header>
 
 <div>
-<h2>{schoolData.schoolName}</h2>
+<h3>School Name {schoolData.schoolName}</h3>
+<h3>Degree {schoolData.degree}</h3>
+<h3>Field of Study {schoolData.fos}</h3>
+<h3>Start Date {schoolData.startDate}</h3>
+<h3>End Date {schoolData.endDate}</h3>
+<h3>Location {schoolData.location}</h3>
 <h1>{name}</h1>
 
 </div>

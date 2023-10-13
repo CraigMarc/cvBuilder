@@ -23,6 +23,7 @@ function App() {
         fos: '',
         startDate: '',
         endDate: '',
+        location: '',
       }
       })
 

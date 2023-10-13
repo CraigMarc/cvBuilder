@@ -65,7 +65,7 @@ function Education(props) {
                 Location:{' '}
                 <input
                     type="text" 
-                    name="locatiion"
+                    name="location"
                     value={schoolData.location} 
                     onChange={handleSchoolChange}
                 />
