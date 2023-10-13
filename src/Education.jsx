@@ -2,66 +2,76 @@ import React, { useState } from "react";
 
 function Education(props) {
     const {
-        phone,
-        address,
-        email,
-        name,
-        handleNameChange,
-        handleEmailChange,
-        handlePhoneChange,
-        handleAddressChange,
-
+        schoolData,
+        handleSchoolChange,
+        handleSchoolSubmit,
+        
     } = props;
 
 
     return (
         <>
             <h2>Education</h2>
+            <form onSubmit={handleSchoolSubmit}>
             <label>
                 School Name:{' '}
                 <input
-                    value={schoolName}
-                    onChange={handleNameChange}
+                    type="text" 
+                    name="schoolName" 
+                    value={schoolData.schoolName } 
+                    onChange={handleSchoolChange}
                 />
             </label>
             <label>
                 Degree:{' '}
                 <input
-                    value={degree}
-                    onChange={handleEmailChange}
+                    type="text" 
+                    name="degree"
+                    value={schoolData.degree} 
+                    onChange={handleSchoolChange}
                 />
             </label>
 
             <label>
                 Field of Study:{' '}
                 <input
-                    value={fos}
-                    onChange={handlePhoneChange}
+                    type="text" 
+                    name="fos"
+                    value={schoolData.fos} 
+                    onChange={handleSchoolChange}
                 />
             </label>
 
             <label>
                 Start Date:{' '}
                 <input
-                    value={startDate}
-                    onChange={handleAddressChange}
+                    type="text" 
+                    name="startDate"
+                    value={schoolData.startDate} 
+                    onChange={handleSchoolChange}
                 />
             </label>
             <label>
                 End Date:{' '}
                 <input
-                    value={endDate}
-                    onChange={handleAddressChange}
+                    type="text" 
+                    name="endDate"
+                    value={schoolData.endDate} 
+                    onChange={handleSchoolChange}
                 />
             </label>
             
             <label>
                 Location:{' '}
                 <input
-                    value={location}
-                    onChange={handleAddressChange}
+                    type="text" 
+                    name="locatiion"
+                    value={schoolData.location} 
+                    onChange={handleSchoolChange}
                 />
             </label>
+            <input type="submit" />
+            </form>
         </>
     );
 }

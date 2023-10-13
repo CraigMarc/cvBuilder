@@ -5,7 +5,7 @@ import viteLogo from '/vite.svg'
 import './App.css'
 import { BasicInfo } from './BasicInfo.jsx'
 import { Resume } from './Resume.jsx'
-
+import { Education } from './Education'
 
 function App() {
 
@@ -14,6 +14,17 @@ function App() {
   const [email, setEmail] = useState('');
   const [phone, setPhone] = useState('');
   const [address, setAddress] = useState('');
+
+  const [edData, setEdData] = useState(
+     {
+      schoolData:{
+        schoolName: '',
+        degree: '',
+        fos: '',
+        startDate: '',
+        endDate: '',
+      }
+      })
 
   //event handlers
 
@@ -32,6 +43,25 @@ function App() {
   function handleAddressChange(e) {
     setAddress(e.target.value);
   }
+
+  const handleSchoolSubmit = (event) => {
+    event.preventDefault();
+   
+  }
+/*
+  const handleSchoolChange = (event) => {
+    const name = event.target.name;
+    const value = event.target.value;
+    setEdData(values => ({...values, [name]: value}))
+  }*/
+
+  
+  const handleSchoolChange = (event) => {
+    const name = event.target.name;
+    const value = event.target.value;
+    setEdData(values => ({...values, [name]: value}))
+  }
+  
 
 
 //return components
@@ -54,6 +84,15 @@ function App() {
         email={email}
         phone={phone}
         address={address}
+        schoolData={edData}
+      />
+
+      <Education
+        schoolData={edData}
+        handleSchoolChange={handleSchoolChange}
+        handleSchoolSubmit={handleSchoolSubmit}
+        
+
       />
 
 
