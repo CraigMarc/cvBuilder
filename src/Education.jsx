@@ -2,11 +2,30 @@ import React, { useState } from "react";
 
 function Education(props) {
     const {
-        schoolData,
-        handleSchoolChange,
+        resData,
+       
         handleSchoolSubmit,
         
     } = props;
+
+    const [schoolData, setSchoolData] = useState(
+        {
+         
+          schoolData: {
+            schoolName: '',
+            degree: '',
+            fos: '',
+            startDate: '',
+            endDate: '',
+            location: '',
+          },
+        })
+
+        const handleSchoolChange = (event) => {
+            const name = event.target.name;
+            const value = event.target.value;
+            setSchoolData(values => ({ ...values, [name]: value }))
+          }
 
 
     return (
@@ -72,6 +91,9 @@ function Education(props) {
             </label>
             <input type="submit" />
             </form>
+        <p>school data</p>
+        <p>name:{schoolData.schoolName}</p>
+        <p>degree:{schoolData.degree}</p>
         </>
     );
 }

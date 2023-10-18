@@ -10,28 +10,24 @@ import { Education } from './Education'
 function App() {
 
   //states
+  /*
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [phone, setPhone] = useState('');
-  const [address, setAddress] = useState('');
+  const [address, setAddress] = useState('');*/
 
-  const [edData, setEdData] = useState(
-    {
+  const [resData, setResData] = useState({
+    
       basicData: {
         name: '',
         email: '',
         phone: '',
         address: '',
       },
-      schoolData: {
-        schoolName: '',
-        degree: '',
-        fos: '',
-        startDate: '',
-        endDate: '',
-        location: '',
-      },
-    })
+      schoolinfo: [],
+      workInfo: [],
+    }
+    )
 
   //event handlers
 /*
@@ -63,10 +59,10 @@ function App() {
     }*/
 
 
-  const handleSchoolChange = (event) => {
+  const handleResChange = (event) => {
     const name = event.target.name;
     const value = event.target.value;
-    setEdData(values => ({ ...values, [name]: value }))
+    setResData(values => ({ ...values, [name]: value }))
   }
 
 
@@ -76,20 +72,20 @@ function App() {
     <div>
 
       <BasicInfo
-        basicData={edData}
-        handleSchoolChange={handleSchoolChange}
+        basicData={resData}
+        handleSchoolChange={handleResChange}
         
       />
 
       <Education
-        schoolData={edData}
-        handleSchoolChange={handleSchoolChange}
+        resData={resData}
+        handleSchoolChange={handleResChange}
         handleSchoolSubmit={handleSchoolSubmit}
       />
 
       <Resume
         
-        data={edData}
+        data={resData}
       />
 
 
