@@ -24,10 +24,9 @@ function App() {
         phone: '',
         address: '',
       },
-      schoolinfo: [],
-      workInfo: [],
-    }
-    )
+    })
+
+    const [schoolData, setSchoolData] = useState([])
 
   //event handlers
 /*
@@ -49,7 +48,17 @@ function App() {
 */
   const handleSchoolSubmit = (event) => {
     event.preventDefault();
+    const data = Object.fromEntries(new FormData(event.target).entries());
+    let uuid = self.crypto.randomUUID();
+    const idData = {...data, Id: uuid}
+    
+    const newSchool = [...schoolData, idData]
 
+     
+   console.log(newSchool)
+      setSchoolData(newSchool);
+   
+  
   }
   /*
     const handleSchoolChange = (event) => {
@@ -86,6 +95,7 @@ function App() {
       <Resume
         
         data={resData}
+        
       />
 
 
