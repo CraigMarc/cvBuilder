@@ -2,15 +2,9 @@ import React, { useState } from "react";
 
 function BasicInfo(props) {
     const {
-        phone,
-        address,
-        email,
-        name,
-        handleNameChange,
-        handleEmailChange,
-        handlePhoneChange,
-        handleAddressChange,
-        
+        basicData,
+        handleSchoolChange,
+               
       } = props;
 
 
@@ -20,31 +14,35 @@ function BasicInfo(props) {
             <label>
                 First name:{' '}
                 <input
-                    value={name}
-                    onChange={handleNameChange}
+                    value={basicData.name }
+                    name="name"
+                    onChange={handleSchoolChange}
                 />
             </label>
             <label>
                 Email:{' '}
                 <input
-                    value={email}
-                    onChange={handleEmailChange}
+                    value={basicData.email }
+                    name="email"
+                    onChange={handleSchoolChange}
                 />
             </label>
 
             <label>
                 Phone:{' '}
                 <input
-                    value={phone}
-                    onChange={handlePhoneChange}
+                    value={basicData.phone }
+                    name="phone"
+                    onChange={handleSchoolChange}
                 />
             </label>
 
             <label>
                 Address:{' '}
                 <input
-                    value={address}
-                    onChange={handleAddressChange}
+                    value={basicData.address }
+                    name="address"
+                    onChange={handleSchoolChange}
                 />
             </label>
 

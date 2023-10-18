@@ -16,19 +16,25 @@ function App() {
   const [address, setAddress] = useState('');
 
   const [edData, setEdData] = useState(
-     {
-      schoolData:{
+    {
+      basicData: {
+        name: '',
+        email: '',
+        phone: '',
+        address: '',
+      },
+      schoolData: {
         schoolName: '',
         degree: '',
         fos: '',
         startDate: '',
         endDate: '',
         location: '',
-      }
-      })
+      },
+    })
 
   //event handlers
-
+/*
   function handleNameChange(e) {
     setName(e.target.value);
   }
@@ -44,63 +50,53 @@ function App() {
   function handleAddressChange(e) {
     setAddress(e.target.value);
   }
-
+*/
   const handleSchoolSubmit = (event) => {
     event.preventDefault();
-   
+
   }
-/*
+  /*
+    const handleSchoolChange = (event) => {
+      const name = event.target.name;
+      const value = event.target.value;
+      setEdData(values => ({...values, [name]: value}))
+    }*/
+
+
   const handleSchoolChange = (event) => {
     const name = event.target.name;
     const value = event.target.value;
-    setEdData(values => ({...values, [name]: value}))
-  }*/
-
-  
-  const handleSchoolChange = (event) => {
-    const name = event.target.name;
-    const value = event.target.value;
-    setEdData(values => ({...values, [name]: value}))
+    setEdData(values => ({ ...values, [name]: value }))
   }
-  
 
 
-//return components
+
+  //return components
   return (
     <div>
 
       <BasicInfo
-        name={name}
-        email={email}
-        phone={phone}
-        address={address}
-        handleNameChange={handleNameChange}
-        handleEmailChange={handleEmailChange}
-        handlePhoneChange={handlePhoneChange}
-        handleAddressChange={handleAddressChange}
-      />
-
-      <Resume
-        name={name}
-        email={email}
-        phone={phone}
-        address={address}
-        schoolData={edData}
+        basicData={edData}
+        handleSchoolChange={handleSchoolChange}
+        
       />
 
       <Education
         schoolData={edData}
         handleSchoolChange={handleSchoolChange}
         handleSchoolSubmit={handleSchoolSubmit}
-        
+      />
 
+      <Resume
+        
+        data={edData}
       />
 
 
     </div>
   )
 
-  
+
 
 
 }
