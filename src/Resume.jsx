@@ -4,6 +4,7 @@ function Resume(props) {
 
         data,
         schoolData,
+        workData,
     } = props;
 
     let schoolName = data.schoolName
@@ -15,7 +16,16 @@ function Resume(props) {
             <p>Field of Study: {data.fos}</p>
         </li>
 
-        )
+    )
+
+    const arrayWorkItems = workData.map(data =>
+        <li key={data.id}>
+            <p>Company: {data.company}</p>
+            <p>Title: {data.title}</p>
+            <p>Start Datsa: {data.wStartDate}</p>
+        </li>
+
+    )
 
     return (
         <>
@@ -29,11 +39,15 @@ function Resume(props) {
             </header>
             <div>
                 <h3>Education:</h3>
-            <ul>{arrayDataItems}</ul>
+                <ul>{arrayDataItems}</ul>
 
             </div>
 
+            <div>
+                <h3>Work Experience:</h3>
+                <ul>{arrayWorkItems}</ul>
 
+            </div>
 
 
 

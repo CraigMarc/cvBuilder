@@ -1,34 +1,16 @@
 import React, { useState } from "react";
 
-function Education(props) {
+function Work(props) {
     const {
-        schoolData,
+        workData,
         handleDelete,
-        handleSchoolSubmit,
+        handleWorkSubmit,
         handleEdit,
 
     } = props;
 
- /* const [schoolData, setSchoolData] = useState(
-        {
 
-           schoolData: {
-                schoolName: '',
-                degree: '',
-                fos: '',
-                startDate: '',
-                endDate: '',
-                location: '',
-                id: '',
-            },
-        })*/
-
-    /*  const handleSchoolChange = (event) => {
-          const name = event.target.name;
-          const value = event.target.value;
-          //setSchoolData(values => ({ ...values, [name]: value }))
-        }*/
-
+/*
         const listSchools = schoolData.map(data =>
             <div key={data.id}>
                 <p>School Name: {data.schoolName}   Degree: {data.degree}</p>
@@ -38,49 +20,40 @@ function Education(props) {
             </div>
     
             )
-       
+       */
 
     return (
         <>
-            <h2>Education Form</h2>
-            <form id="edForm" onSubmit={handleSchoolSubmit}>
+            <h2>Work Experience</h2>
+            <form onSubmit={handleWorkSubmit}>
                 <label>
-                    School Name:{' '}
+                    Company:{' '}
                     <input
-                        id="schoolName"
+                        id="company"
                         type="text"
-                        name="schoolName"
+                        name="company"
                         placeholder="school"
                       //  value={schoolData.schoolName}
                     //onChange={handleSchoolChange}
                     />
                 </label>
                 <label>
-                    Degree:{' '}
+                    Title/Position:{' '}
                     <input
-                        id="degree"
+                        id="title"
                         type="text"
-                        name="degree"
+                        name="title"
                       //value='bs'
                     //onChange={handleSchoolChange}
                     />
                 </label>
 
-                <label>
-                    Field of Study:{' '}
-                    <input
-                        id="fos"
-                        type="text"
-                        name="fos"
-                      //  value={schoolData.fos}
-                    //onChange={handleSchoolChange}
-                    />
-                </label>
+               
 
                 <label>
                     Start Date:{' '}
                     <input
-                        id="startDate"
+                        id="wStartDate"
                         type="text"
                         name="startDate"
                       //  value={schoolData.startDate}
@@ -90,7 +63,7 @@ function Education(props) {
                 <label>
                     End Date:{' '}
                     <input
-                        id="endDate"
+                        id="wEndDate"
                         type="text"
                         name="endDate"
                       //  value={schoolData.endDate}
@@ -101,17 +74,28 @@ function Education(props) {
                 <label>
                     Location:{' '}
                     <input
-                        id="location"
+                        id="wLocation"
                         type="text"
                         name="location"
                       //  value={schoolData.location}
                     // onChange={handleSchoolChange}
                     />
                 </label>
+
+                <label>
+                    Description:{' '}
+                    <input
+                        id="description"
+                        type="text"
+                        name="descrption"
+                      //  value={schoolData.fos}
+                    //onChange={handleSchoolChange}
+                    />
+                </label>
                 <input type="submit" />
             </form>
         <div>
-           <p>{listSchools}</p>
+           
         </div>
         </>
     );
@@ -119,4 +103,4 @@ function Education(props) {
 
 
 
-export { Education };
+export { Work };

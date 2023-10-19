@@ -6,15 +6,10 @@ import './App.css'
 import { BasicInfo } from './BasicInfo.jsx'
 import { Resume } from './Resume.jsx'
 import { Education } from './Education'
+import { Work } from './Work'
 
 function App() {
 
-  //states
-  /*
-  const [name, setName] = useState('');
-  const [email, setEmail] = useState('');
-  const [phone, setPhone] = useState('');
-  const [address, setAddress] = useState('');*/
 
   const [resData, setResData] = useState({
 
@@ -27,6 +22,8 @@ function App() {
   })
 
   const [schoolData, setSchoolData] = useState([])
+
+  const [workData, setWorkData] = useState([])
 
   //event handlers
   /*
@@ -110,6 +107,17 @@ function App() {
 
   }
 
+  const handleWorkSubmit = (event) => {
+    event.preventDefault();
+    const data = Object.fromEntries(new FormData(event.target).entries());
+    let uuid = self.crypto.randomUUID();
+    const idData = { ...data, id: uuid }
+    const newWork = [...workData, idData]
+    setWorkData(newWork);
+
+    clearAllInputs()
+  }
+
 
 
   //return components
@@ -130,10 +138,16 @@ function App() {
         handleEdit={handleEdit}
       />
 
+      <Work
+      workData={workData}
+      handleWorkSubmit={handleWorkSubmit}
+      />
+
       <Resume
 
         data={resData}
         schoolData={schoolData}
+        workData={workData}
 
       />
 
