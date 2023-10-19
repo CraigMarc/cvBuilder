@@ -3,7 +3,7 @@ import React, { useState } from "react";
 function Education(props) {
     const {
         schoolData,
-
+        handleDelete,
         handleSchoolSubmit,
 
     } = props;
@@ -31,8 +31,8 @@ function Education(props) {
         const listSchools = schoolData.map(data =>
             <div key={data.id}>
                 <p>School Name: {data.schoolName}   Degree: {data.degree}</p>
-                <p></p>
-                <button>delete</button>
+                
+                <button value={data.id} onClick={handleDelete}>delete</button>
                 <button>edit</button>
             </div>
     

@@ -52,12 +52,8 @@ function App() {
     let uuid = self.crypto.randomUUID();
     const idData = {...data, id: uuid}
     const newSchool = [...schoolData, idData]
-
-     
-   console.log(newSchool)
       setSchoolData(newSchool);
    
-  
   }
   /*
     const handleSchoolChange = (event) => {
@@ -71,6 +67,13 @@ function App() {
     const name = event.target.name;
     const value = event.target.value;
     setResData(values => ({ ...values, [name]: value }))
+  }
+
+  const handleDelete = (event) => {
+    const id = event.target.value;
+    
+    const newData = schoolData.filter((item) => item.id !== id)
+    setSchoolData(newData);
   }
 
 
@@ -89,6 +92,7 @@ function App() {
         schoolData={schoolData}
         handleSchoolChange={handleResChange}
         handleSchoolSubmit={handleSchoolSubmit}
+        handleDelete={handleDelete}
       />
 
       <Resume
