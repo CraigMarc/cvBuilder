@@ -47,6 +47,7 @@ function Education(props) {
                 <label>
                     School Name:{' '}
                     <input
+                        id="schoolName"
                         type="text"
                         name="schoolName"
                         placeholder="school"
@@ -57,6 +58,7 @@ function Education(props) {
                 <label>
                     Degree:{' '}
                     <input
+                        id="degree"
                         type="text"
                         name="degree"
                       //  value={schoolData.degree}
@@ -67,6 +69,7 @@ function Education(props) {
                 <label>
                     Field of Study:{' '}
                     <input
+                        id="fos"
                         type="text"
                         name="fos"
                       //  value={schoolData.fos}
@@ -77,6 +80,7 @@ function Education(props) {
                 <label>
                     Start Date:{' '}
                     <input
+                        id="startDate"
                         type="text"
                         name="startDate"
                       //  value={schoolData.startDate}
@@ -86,6 +90,7 @@ function Education(props) {
                 <label>
                     End Date:{' '}
                     <input
+                        id="endDate"
                         type="text"
                         name="endDate"
                       //  value={schoolData.endDate}
@@ -96,6 +101,7 @@ function Education(props) {
                 <label>
                     Location:{' '}
                     <input
+                        id="location"
                         type="text"
                         name="location"
                       //  value={schoolData.location}

@@ -17,60 +17,76 @@ function App() {
   const [address, setAddress] = useState('');*/
 
   const [resData, setResData] = useState({
-    
-      basicData: {
-        name: '',
-        email: '',
-        phone: '',
-        address: '',
-      },
-    })
 
-    const [schoolData, setSchoolData] = useState([])
+    basicData: {
+      name: '',
+      email: '',
+      phone: '',
+      address: '',
+    },
+  })
+
+  const [schoolData, setSchoolData] = useState([])
 
   //event handlers
-/*
-  function handleNameChange(e) {
-    setName(e.target.value);
-  }
-
-  function handleEmailChange(e) {
-    setEmail(e.target.value);
-  }
-
-  function handlePhoneChange(e) {
-    setPhone(e.target.value);
-  }
-
-  function handleAddressChange(e) {
-    setAddress(e.target.value);
-  }
-*/
+  /*
+    function handleNameChange(e) {
+      setName(e.target.value);
+    }
+  
+    function handleEmailChange(e) {
+      setEmail(e.target.value);
+    }
+  
+    function handlePhoneChange(e) {
+      setPhone(e.target.value);
+    }
+  
+    function handleAddressChange(e) {
+      setAddress(e.target.value);
+    }
+  */
   const handleSchoolSubmit = (event) => {
     event.preventDefault();
     const data = Object.fromEntries(new FormData(event.target).entries());
     let uuid = self.crypto.randomUUID();
-    const idData = {...data, id: uuid}
+    const idData = { ...data, id: uuid }
     const newSchool = [...schoolData, idData]
-      setSchoolData(newSchool);
-     
-     clearAllInputs()
+    setSchoolData(newSchool);
+
+    clearAllInputs()
   }
 
   function clearAllInputs() {
     let allInputs = document.querySelectorAll('input');
     allInputs.forEach(singleInput => singleInput.value = '');
+
+  }
+
+  function addAllInputs(id) {
+    let schoolInput = document.getElementById('schoolName');
+    let degreeInput = document.getElementById('degree');
+    let fosInput = document.getElementById('fos');
+    let startDateInput = document.getElementById('startDate');
+    let endDateInput = document.getElementById('endDate');
+    let locationInput = document.getElementById('location');
+
+    const newData = schoolData.filter((item) => item.id == id)
+    const idRem = newData[0].id
     
- }
+    schoolInput.value = newData[0].schoolName
+    degreeInput.value = newData[0].degree
+    fosInput.value = newData[0].fos
+    startDateInput.value = newData[0].startDate
+    endDateInput.value = newData[0].endDate
+    locationInput.value = newData[0].location
 
- function addAllInputs(id) {
-  let allInputs = document.querySelectorAll('input');
-  //allInputs.forEach(singleInput => singleInput.value = '');
-  const newData = schoolData.filter((item) => item.id == id)
-  console.log(newData)
-}
+    const delData = schoolData.filter((item) => item.id !== idRem)
+    setSchoolData(delData);
 
- 
+  }
+
+
 
   const handleResChange = (event) => {
     const name = event.target.name;
@@ -103,7 +119,7 @@ function App() {
       <BasicInfo
         basicData={resData}
         handleSchoolChange={handleResChange}
-        
+
       />
 
       <Education
@@ -115,10 +131,10 @@ function App() {
       />
 
       <Resume
-        
+
         data={resData}
         schoolData={schoolData}
-        
+
       />
 
 
