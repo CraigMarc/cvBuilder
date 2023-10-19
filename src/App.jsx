@@ -50,8 +50,7 @@ function App() {
     event.preventDefault();
     const data = Object.fromEntries(new FormData(event.target).entries());
     let uuid = self.crypto.randomUUID();
-    const idData = {...data, Id: uuid}
-    
+    const idData = {...data, id: uuid}
     const newSchool = [...schoolData, idData]
 
      
@@ -95,6 +94,7 @@ function App() {
       <Resume
         
         data={resData}
+        schoolData={schoolData}
         
       />
 
