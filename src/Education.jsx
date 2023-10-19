@@ -5,6 +5,7 @@ function Education(props) {
         schoolData,
         handleDelete,
         handleSchoolSubmit,
+        handleEdit,
 
     } = props;
 
@@ -33,7 +34,7 @@ function Education(props) {
                 <p>School Name: {data.schoolName}   Degree: {data.degree}</p>
                 
                 <button value={data.id} onClick={handleDelete}>delete</button>
-                <button>edit</button>
+                <button value={data.id} onClick={handleEdit}>edit</button>
             </div>
     
             )
@@ -48,6 +49,7 @@ function Education(props) {
                     <input
                         type="text"
                         name="schoolName"
+                        placeholder="school"
                       //  value={schoolData.schoolName}
                     //onChange={handleSchoolChange}
                     />

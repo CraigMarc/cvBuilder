@@ -53,15 +53,24 @@ function App() {
     const idData = {...data, id: uuid}
     const newSchool = [...schoolData, idData]
       setSchoolData(newSchool);
-   
+     
+     clearAllInputs()
   }
-  /*
-    const handleSchoolChange = (event) => {
-      const name = event.target.name;
-      const value = event.target.value;
-      setEdData(values => ({...values, [name]: value}))
-    }*/
 
+  function clearAllInputs() {
+    let allInputs = document.querySelectorAll('input');
+    allInputs.forEach(singleInput => singleInput.value = '');
+    
+ }
+
+ function addAllInputs(id) {
+  let allInputs = document.querySelectorAll('input');
+  //allInputs.forEach(singleInput => singleInput.value = '');
+  const newData = schoolData.filter((item) => item.id == id)
+  console.log(newData)
+}
+
+ 
 
   const handleResChange = (event) => {
     const name = event.target.name;
@@ -71,9 +80,18 @@ function App() {
 
   const handleDelete = (event) => {
     const id = event.target.value;
-    
     const newData = schoolData.filter((item) => item.id !== id)
     setSchoolData(newData);
+
+  }
+
+  const handleEdit = (event) => {
+    const id = event.target.value;
+
+    addAllInputs(id)
+    //const newData = schoolData.filter((item) => item.id !== id)
+    //setSchoolData(newData);
+
   }
 
 
@@ -93,6 +111,7 @@ function App() {
         handleSchoolChange={handleResChange}
         handleSchoolSubmit={handleSchoolSubmit}
         handleDelete={handleDelete}
+        handleEdit={handleEdit}
       />
 
       <Resume
