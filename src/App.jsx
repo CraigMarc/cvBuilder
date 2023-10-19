@@ -86,7 +86,7 @@ function App() {
       />
 
       <Education
-        resData={resData}
+        schoolData={schoolData}
         handleSchoolChange={handleResChange}
         handleSchoolSubmit={handleSchoolSubmit}
       />

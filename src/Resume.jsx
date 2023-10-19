@@ -10,9 +10,9 @@ function Resume(props) {
 
     const arrayDataItems = schoolData.map(data =>
         <li key={data.id}>
-            <p>{data.schoolName}</p>
-            <span>{data.degree}</span>
-            <span>{data.fos}</span>
+            <p>School Name: {data.schoolName}</p>
+            <p>Degree: {data.degree}</p>
+            <p>Field of Study: {data.fos}</p>
         </li>
 
         )
@@ -28,6 +28,7 @@ function Resume(props) {
 
             </header>
             <div>
+                <h3>Education:</h3>
             <ul>{arrayDataItems}</ul>
 
             </div>
