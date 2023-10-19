@@ -3,24 +3,24 @@ import React, { useState } from "react";
 function Work(props) {
     const {
         workData,
-        handleDelete,
+        handleWorkDelete,
         handleWorkSubmit,
-        handleEdit,
+        handleWorkEdit,
 
     } = props;
 
 
-/*
-        const listSchools = schoolData.map(data =>
+
+        const listWork = workData.map(data =>
             <div key={data.id}>
-                <p>School Name: {data.schoolName}   Degree: {data.degree}</p>
+                <p>Company: {data.company}   Title: {data.title}</p>
                 
-                <button value={data.id} onClick={handleDelete}>delete</button>
-                <button value={data.id} onClick={handleEdit}>edit</button>
+                <button value={data.id} onClick={handleWorkDelete}>delete</button>
+                <button value={data.id} onClick={handleWorkEdit}>edit</button>
             </div>
     
             )
-       */
+       
 
     return (
         <>
@@ -55,7 +55,7 @@ function Work(props) {
                     <input
                         id="wStartDate"
                         type="text"
-                        name="startDate"
+                        name="wStartDate"
                       //  value={schoolData.startDate}
                     //onChange={handleSchoolChange}
                     />
@@ -65,7 +65,7 @@ function Work(props) {
                     <input
                         id="wEndDate"
                         type="text"
-                        name="endDate"
+                        name="wEndDate"
                       //  value={schoolData.endDate}
                     //onChange={handleSchoolChange}
                     />
@@ -76,7 +76,7 @@ function Work(props) {
                     <input
                         id="wLocation"
                         type="text"
-                        name="location"
+                        name="wLocation"
                       //  value={schoolData.location}
                     // onChange={handleSchoolChange}
                     />
@@ -87,7 +87,7 @@ function Work(props) {
                     <input
                         id="description"
                         type="text"
-                        name="descrption"
+                        name="description"
                       //  value={schoolData.fos}
                     //onChange={handleSchoolChange}
                     />
@@ -95,7 +95,7 @@ function Work(props) {
                 <input type="submit" />
             </form>
         <div>
-           
+        <p>{listWork}</p>
         </div>
         </>
     );

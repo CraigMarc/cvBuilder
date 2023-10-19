@@ -118,6 +118,46 @@ function App() {
     clearAllInputs()
   }
 
+  const handleWorkDelete = (event) => {
+    const id = event.target.value;
+    const newData = workData.filter((item) => item.id !== id)
+    setWorkData(newData);
+
+  }
+
+  const handleWorkEdit = (event) => {
+    const id = event.target.value;
+
+    addWorkInputs(id)
+    //const newData = schoolData.filter((item) => item.id !== id)
+    //setSchoolData(newData);
+
+  }
+
+  function addWorkInputs(id) {
+    let company = document.getElementById('company');
+    let title = document.getElementById('title');
+    let wStartDate = document.getElementById('wStartDate');
+    let wEndDate = document.getElementById('wEndDate');
+    let wLocation = document.getElementById('wLocation');
+    let description = document.getElementById('description');
+
+    const newWorkData = workData.filter((item) => item.id == id)
+    console.log(newWorkData)
+    const idRem = newWorkData[0].id
+    
+    company.value = newWorkData[0].company
+    title.value = newWorkData[0].title
+    wStartDate.value = newWorkData[0].wStartDate
+    wEndDate.value = newWorkData[0].wEndDate
+    wLocation.value = newWorkData[0].wLocation
+    description.value = newWorkData[0].description
+
+    const delWorkData = workData.filter((item) => item.id !== idRem)
+    setWorkData(delWorkData);
+
+  }
+
 
 
   //return components
@@ -141,6 +181,8 @@ function App() {
       <Work
       workData={workData}
       handleWorkSubmit={handleWorkSubmit}
+      handleWorkDelete={handleWorkDelete}
+      handleWorkEdit={handleWorkEdit}
       />
 
       <Resume
