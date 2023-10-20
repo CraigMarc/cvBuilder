@@ -34,8 +34,7 @@ function Work(props) {
                         name="company"
                         placeholder="company"
                         required
-                      //  value={schoolData.schoolName}
-                    //onChange={handleSchoolChange}
+                     
                     />
                 </label>
                 <label>
@@ -46,8 +45,7 @@ function Work(props) {
                         name="title"
                         placeholder="title"
                         required
-                      //value='bs'
-                    //onChange={handleSchoolChange}
+                     
                     />
                 </label>
 
@@ -59,8 +57,7 @@ function Work(props) {
                         id="wStartDate"
                         type="date"
                         name="wStartDate"
-                      //  value={schoolData.startDate}
-                    //onChange={handleSchoolChange}
+                     
                     />
                 </label>
                 <label>
@@ -69,8 +66,7 @@ function Work(props) {
                         id="wEndDate"
                         type="date"
                         name="wEndDate"
-                      //  value={schoolData.endDate}
-                    //onChange={handleSchoolChange}
+                     
                     />
                 </label>
 
@@ -81,8 +77,7 @@ function Work(props) {
                         type="text"
                         name="wLocation"
                         placeholder="location"
-                      //  value={schoolData.location}
-                    // onChange={handleSchoolChange}
+                    
                     />
                 </label>
 
@@ -93,14 +88,13 @@ function Work(props) {
                         type="textarea"
                         name="description"
                         placeholder="description"
-                      //  value={schoolData.fos}
-                    //onChange={handleSchoolChange}
+                     
                     />
                 </label>
                 <input type="submit" />
             </form>
         <div>
-        <p>{listWork}</p>
+        <div>{listWork}</div>
         </div>
         </>
     );

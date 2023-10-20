@@ -9,25 +9,7 @@ function Education(props) {
 
     } = props;
 
- /* const [schoolData, setSchoolData] = useState(
-        {
 
-           schoolData: {
-                schoolName: '',
-                degree: '',
-                fos: '',
-                startDate: '',
-                endDate: '',
-                location: '',
-                id: '',
-            },
-        })*/
-
-    /*  const handleSchoolChange = (event) => {
-          const name = event.target.name;
-          const value = event.target.value;
-          //setSchoolData(values => ({ ...values, [name]: value }))
-        }*/
 
         const listSchools = schoolData.map(data =>
             <div key={data.id}>
@@ -116,7 +98,7 @@ function Education(props) {
                 <input type="submit" />
             </form>
         <div>
-           <p>{listSchools}</p>
+           <div>{listSchools}</div>
         </div>
         </>
     );
