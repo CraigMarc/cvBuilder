@@ -53,3 +53,28 @@ header {
 .locImg {
   width: 25px;
 }
+
+.schoolContainer {
+ 
+  display: grid;
+  grid-template-columns: 2fr 4fr;
+  margin-left: 60px;
+  margin-right: 60px;
+}
+
+h3 {
+  margin-left: 60px;
+}
+
+.workContainer {
+ 
+  display: grid;
+  grid-template-columns: 2fr 4fr;
+  margin-left: 60px;
+  margin-right: 60px;
+
+}
+
+p {
+  margin: 0;
+}

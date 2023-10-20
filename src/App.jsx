@@ -36,7 +36,7 @@ function App() {
     "wStartDate": "2020-10-16",
     "wEndDate": "2023-10-20",
     "wLocation": "Anytown, USA",
-    "description": "sdaklaskdnknlasmnkdasklnmlas;ml;asdlmk",
+    "description": "Designed a REST API call in Java that allows clients to simultaneously update multiple interdependent elements",
     "id": "0a1d4557-6ad2-4ec4-80d9-63b7947f9975"
 }])
   

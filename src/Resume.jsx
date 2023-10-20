@@ -15,24 +15,33 @@ function Resume(props) {
 
     const arrayDataItems = schoolData.map(data =>
         <div key={data.id}>
-            <p>School Name: {data.schoolName}</p>
-            <p>Degree: {data.degree}</p>
-            <p>Field of Study: {data.fos}</p>
-            <p>Start Date: {data.startDate}</p>
-            <p>End Date: {data.endDate}</p>
-            <p>Location: {data.location}</p>
+            <div className="schoolContainer">
+            <div>
+            <p>{data.startDate} - {data.endDate}</p>
+            <p>{data.location}</p>
+            </div>
+            <div>
+           <p><strong>{data.schoolName}</strong></p>
+            <p>{data.degree} {data.fos}</p>
+            </div>
+            </div>
         </div>
 
     )
 
     const arrayWorkItems = workData.map(data =>
-      <div key={data.id}>
-            <p>Company: {data.company}</p>
-            <p>Title: {data.title}</p>
-            <p>Start Date: {data.wStartDate}</p>
-            <p>End Date: {data.wEndDate}</p>
-            <p>Location: {data.wLocation}</p>
-            <p>Description: {data.description}</p>
+      <div key={data.id} className="workContainer">
+            
+            <div>
+            <p>{data.wStartDate} - {data.wEndDate}</p>
+            <p>{data.wLocation}</p>
+            </div>
+            <div>
+            <p><strong>{data.company}</strong></p>
+            <p>{data.title}</p>
+            <p>{data.description}</p>
+            </div>
+            
         </div>
 
     )
