@@ -12,13 +12,11 @@ function App() {
 
 
   const [resData, setResData] = useState({
-
-    basicData: {
-      name: '',
-      email: '',
-      phone: '',
-      address: '',
-    },
+      name: 'John Doe',
+      email: 'jdoe@gmail.com',
+      phone: '(999)999-9999',
+      address: 'Anytown, PA',
+    
   })
 
   const [schoolData, setSchoolData] = useState([])
@@ -26,23 +24,7 @@ function App() {
   const [workData, setWorkData] = useState([])
 
   //event handlers
-  /*
-    function handleNameChange(e) {
-      setName(e.target.value);
-    }
-  
-    function handleEmailChange(e) {
-      setEmail(e.target.value);
-    }
-  
-    function handlePhoneChange(e) {
-      setPhone(e.target.value);
-    }
-  
-    function handleAddressChange(e) {
-      setAddress(e.target.value);
-    }
-  */
+ 
   const handleSchoolSubmit = (event) => {
     event.preventDefault();
     const data = Object.fromEntries(new FormData(event.target).entries());
@@ -84,12 +66,17 @@ function App() {
   }
 
 
-
+/*
   const handleResChange = (event) => {
     const name = event.target.name;
     const value = event.target.value;
     setResData(values => ({ ...values, [name]: value }))
-  }
+  }*/
+
+  const handleResChange = (event) => {
+    const { name, value } = event.target;
+    setResData({ ...resData, [name]: value });
+  };
 
   const handleDelete = (event) => {
     const id = event.target.value;
@@ -166,7 +153,7 @@ function App() {
 
       <BasicInfo
         basicData={resData}
-        handleSchoolChange={handleResChange}
+        handleBasicChange={handleResChange}
 
       />
 
