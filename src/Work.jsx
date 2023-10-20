@@ -32,7 +32,7 @@ function Work(props) {
                         id="company"
                         type="text"
                         name="company"
-                        placeholder="school"
+                        placeholder="company"
                       //  value={schoolData.schoolName}
                     //onChange={handleSchoolChange}
                     />
@@ -43,6 +43,7 @@ function Work(props) {
                         id="title"
                         type="text"
                         name="title"
+                        placeholder="title"
                       //value='bs'
                     //onChange={handleSchoolChange}
                     />
@@ -54,7 +55,7 @@ function Work(props) {
                     Start Date:{' '}
                     <input
                         id="wStartDate"
-                        type="text"
+                        type="date"
                         name="wStartDate"
                       //  value={schoolData.startDate}
                     //onChange={handleSchoolChange}
@@ -64,7 +65,7 @@ function Work(props) {
                     End Date:{' '}
                     <input
                         id="wEndDate"
-                        type="text"
+                        type="date"
                         name="wEndDate"
                       //  value={schoolData.endDate}
                     //onChange={handleSchoolChange}
@@ -77,6 +78,7 @@ function Work(props) {
                         id="wLocation"
                         type="text"
                         name="wLocation"
+                        placeholder="location"
                       //  value={schoolData.location}
                     // onChange={handleSchoolChange}
                     />
@@ -84,10 +86,11 @@ function Work(props) {
 
                 <label>
                     Description:{' '}
-                    <input
+                    <textarea
                         id="description"
-                        type="text"
+                        type="textarea"
                         name="description"
+                        placeholder="description"
                       //  value={schoolData.fos}
                     //onChange={handleSchoolChange}
                     />

@@ -50,7 +50,7 @@ function Education(props) {
                         id="schoolName"
                         type="text"
                         name="schoolName"
-                        placeholder="school"
+                        placeholder="school name"
                       //  value={schoolData.schoolName}
                     //onChange={handleSchoolChange}
                     />
@@ -61,6 +61,7 @@ function Education(props) {
                         id="degree"
                         type="text"
                         name="degree"
+                        placeholder="degree"
                       //value='bs'
                     //onChange={handleSchoolChange}
                     />
@@ -72,6 +73,7 @@ function Education(props) {
                         id="fos"
                         type="text"
                         name="fos"
+                        placeholder="Field of Study"
                       //  value={schoolData.fos}
                     //onChange={handleSchoolChange}
                     />
@@ -81,7 +83,7 @@ function Education(props) {
                     Start Date:{' '}
                     <input
                         id="startDate"
-                        type="text"
+                        type="date"
                         name="startDate"
                       //  value={schoolData.startDate}
                     //onChange={handleSchoolChange}
@@ -91,7 +93,7 @@ function Education(props) {
                     End Date:{' '}
                     <input
                         id="endDate"
-                        type="text"
+                        type="date"
                         name="endDate"
                       //  value={schoolData.endDate}
                     //onChange={handleSchoolChange}
@@ -104,6 +106,7 @@ function Education(props) {
                         id="location"
                         type="text"
                         name="location"
+                        placeholder="location"
                       //  value={schoolData.location}
                     // onChange={handleSchoolChange}
                     />

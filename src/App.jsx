@@ -19,10 +19,26 @@ function App() {
     
   })
 
-  const [schoolData, setSchoolData] = useState([])
+  const [schoolData, setSchoolData] = useState([{
+    "schoolName": "University",
+    "degree": "BS",
+    "fos": "Computer Science",
+    "startDate": "2010-09-01",
+    "endDate": "2014-05-20",
+    "location": "Anytown, PA",
+    "id": "28946e45-f4e9-46c0-aba8-097b1643adbf"
+}])
 
-  const [workData, setWorkData] = useState([])
-
+  const [workData, setWorkData] = useState([{
+    "company": "AAA Inc.",
+    "title": "Junior Analyst",
+    "wStartDate": "2020-10-16",
+    "wEndDate": "2023-10-20",
+    "wLocation": "Anytown, USA",
+    "description": "sdaklaskdnknlasmnkdasklnmlas;ml;asdlmk",
+    "id": "0a1d4557-6ad2-4ec4-80d9-63b7947f9975"
+}])
+  console.log(workData)
   //event handlers
  
   const handleSchoolSubmit = (event) => {
