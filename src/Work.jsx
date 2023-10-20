@@ -33,6 +33,7 @@ function Work(props) {
                         type="text"
                         name="company"
                         placeholder="company"
+                        required
                       //  value={schoolData.schoolName}
                     //onChange={handleSchoolChange}
                     />
@@ -44,6 +45,7 @@ function Work(props) {
                         type="text"
                         name="title"
                         placeholder="title"
+                        required
                       //value='bs'
                     //onChange={handleSchoolChange}
                     />

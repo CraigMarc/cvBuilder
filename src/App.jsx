@@ -38,7 +38,7 @@ function App() {
     "description": "sdaklaskdnknlasmnkdasklnmlas;ml;asdlmk",
     "id": "0a1d4557-6ad2-4ec4-80d9-63b7947f9975"
 }])
-  console.log(workData)
+  
   //event handlers
  
   const handleSchoolSubmit = (event) => {

@@ -51,6 +51,7 @@ function Education(props) {
                         type="text"
                         name="schoolName"
                         placeholder="school name"
+                        required
                       //  value={schoolData.schoolName}
                     //onChange={handleSchoolChange}
                     />
@@ -62,6 +63,7 @@ function Education(props) {
                         type="text"
                         name="degree"
                         placeholder="degree"
+                        required
                       //value='bs'
                     //onChange={handleSchoolChange}
                     />
