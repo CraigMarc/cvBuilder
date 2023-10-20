@@ -43,6 +43,7 @@
 
 header {
   text-align: center;
+  background-color: #F5F5F5;
 }
 
 .container {
@@ -64,6 +65,8 @@ header {
 
 h3 {
   margin-left: 60px;
+  margin-right: 60px;
+  background-color: #F5F5F5;
 }
 
 .workContainer {
@@ -72,9 +75,19 @@ h3 {
   grid-template-columns: 2fr 4fr;
   margin-left: 60px;
   margin-right: 60px;
-
+ 
 }
 
 p {
   margin: 0;
+}
+
+.work {
+  padding-top: 50px;
+  text-align: center;
+}
+
+.ed {
+  padding-top: 50px;
+  text-align: center;
 }

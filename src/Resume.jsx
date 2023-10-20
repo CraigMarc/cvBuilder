@@ -60,14 +60,14 @@ function Resume(props) {
                 </div>
 
             </header>
-            <div>
-                <h3>Education:</h3>
+            <div className="ed">
+                <h3>Education</h3>
                 <div>{arrayDataItems}</div>
 
             </div>
 
-            <div>
-                <h3>Work Experience:</h3>
+            <div className="work">
+                <h3>Work Experience</h3>
                 <div>{arrayWorkItems}</div>
 
             </div>
