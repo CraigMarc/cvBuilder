@@ -29,7 +29,10 @@ function Resume(props) {
       <div key={data.id}>
             <p>Company: {data.company}</p>
             <p>Title: {data.title}</p>
-            <p>Start Datsa: {data.wStartDate}</p>
+            <p>Start Date: {data.wStartDate}</p>
+            <p>End Date: {data.wEndDate}</p>
+            <p>Location: {data.wLocation}</p>
+            <p>Description: {data.description}</p>
         </div>
 
     )
