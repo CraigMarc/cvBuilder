@@ -55,8 +55,8 @@ function Resume(props) {
     
 
     return (
-       
-        <div>
+       <div>
+        <div className="resume">
             <header>
 
                 <h1>{data.name}</h1>
@@ -85,7 +85,7 @@ function Resume(props) {
             
             
           </div>
-
+        </div>
    
 
         

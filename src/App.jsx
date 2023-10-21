@@ -204,7 +204,9 @@ function App() {
           schoolData={schoolData}
           workData={workData}
         />
+        <div className="printButton">
         <button onClick={togglePrint}>Print Resume</button>
+        </div>
       </div>
       </div>
 
