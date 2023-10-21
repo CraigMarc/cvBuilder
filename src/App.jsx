@@ -172,6 +172,8 @@ function App() {
   };
 
   const handlePrint = (event) => {
+    const btn = document.getElementById("printButton");
+    btn.style.display = "none";
     window.print()
     setPrint('false')
   };
@@ -210,9 +212,9 @@ function App() {
           data={resData}
           schoolData={schoolData}
           workData={workData}
-          
+
         />
-      <button onClick={togglePrint}>Print Resume</button>
+        <button onClick={togglePrint}>Print Resume</button>
 
       </div>
 

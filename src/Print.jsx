@@ -82,7 +82,7 @@ function Print(props) {
             </div>
 
 
-            <button onClick={handlePrint}>Print Resume</button>
+            <button id="printButton" onClick={handlePrint}>Print Resume</button>
             
           </div>
 
