@@ -70,8 +70,35 @@ p {
 
 input {
   display: block;
+  background-color: #F5F5F5;
+  border-radius: 5px;
+  border: none;
+  font-size: 17px;
+  
 }
 
 h2 {
   text-align: center;
 }
+label {
+  font-weight: bold;
+}
+
+.educationContainer
+{
+ display: flex;
+ flex-wrap: wrap;
+ justify-content: center;
+ text-align: center;
+ 
+}
+
+.schoolListContainer {
+  padding-top: 20px;
+  text-align: center;
+}
+
+.schoolTitle {
+  font-weight: bold;
+}
+

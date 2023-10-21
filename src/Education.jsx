@@ -13,10 +13,10 @@ function Education(props) {
 
         const listSchools = schoolData.map(data =>
             <div key={data.id}>
-                <p>School Name: {data.schoolName}   Degree: {data.degree}</p>
+                <p className="schoolTitle">School Name: {data.schoolName}   Degree: {data.degree}</p>
                 
-                <button value={data.id} onClick={handleDelete}>delete</button>
-                <button value={data.id} onClick={handleEdit}>edit</button>
+                <button className="delete" value={data.id} onClick={handleDelete}>delete</button>
+                <button className="edit" value={data.id} onClick={handleEdit}>edit</button>
             </div>
     
             )
@@ -25,6 +25,7 @@ function Education(props) {
     return (
         <>
             <h2>Education Form</h2>
+            <div className="educationContainer">
             <form id="edForm" onSubmit={handleSchoolSubmit}>
                 <label>
                     School Name:{' '}
@@ -97,8 +98,11 @@ function Education(props) {
                 </label>
                 <input type="submit" />
             </form>
+            </div>
         <div>
+            <div className="schoolListContainer">
            <div>{listSchools}</div>
+           </div>
         </div>
         </>
     );
