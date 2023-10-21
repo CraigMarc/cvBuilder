@@ -38,8 +38,7 @@ function Education(props) {
                         name="schoolName"
                         placeholder="school name"
                         required
-                      //  value={schoolData.schoolName}
-                    //onChange={handleSchoolChange}
+                      
                     />
                 </label>
                 <label>
@@ -50,8 +49,7 @@ function Education(props) {
                         name="degree"
                         placeholder="degree"
                         required
-                      //value='bs'
-                    //onChange={handleSchoolChange}
+                      
                     />
                 </label>
 
@@ -62,8 +60,7 @@ function Education(props) {
                         type="text"
                         name="fos"
                         placeholder="Field of Study"
-                      //  value={schoolData.fos}
-                    //onChange={handleSchoolChange}
+                     
                     />
                 </label>
 
@@ -73,8 +70,7 @@ function Education(props) {
                         id="startDate"
                         type="date"
                         name="startDate"
-                      //  value={schoolData.startDate}
-                    //onChange={handleSchoolChange}
+                     
                     />
                 </label>
                 <label>
@@ -83,8 +79,7 @@ function Education(props) {
                         id="endDate"
                         type="date"
                         name="endDate"
-                      //  value={schoolData.endDate}
-                    //onChange={handleSchoolChange}
+                     
                     />
                 </label>
 
@@ -95,8 +90,7 @@ function Education(props) {
                         type="text"
                         name="location"
                         placeholder="location"
-                      //  value={schoolData.location}
-                    // onChange={handleSchoolChange}
+                     
                     />
                 </label>
                 <div className="submitContainer">

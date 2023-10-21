@@ -55,7 +55,7 @@ function Resume(props) {
     
 
     return (
-       <div>
+       <div className="resumeContainer">
         <div className="resume">
             <header>
 
