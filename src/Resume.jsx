@@ -1,15 +1,20 @@
 import email from './assets/email.svg';
 import phone from './assets/phone.svg';
 import location from './assets/location.png';
+import React from 'react'
+
+//const Resume = React.forwardRef((props, ref) => {
 
 function Resume(props) {
 
     const {
-
+        
         data,
         schoolData,
         workData,
     } = props;
+
+   
 
     let schoolName = data.schoolName
 
@@ -45,9 +50,11 @@ function Resume(props) {
         </div>
 
     )
+    
 
     return (
-        <>
+       
+        <div /*ref={ref}*/>
             <header>
 
                 <h1>{data.name}</h1>
@@ -73,12 +80,15 @@ function Resume(props) {
             </div>
 
 
+      
+            
+          </div>
 
-        </>
+   
+
+        
     )
 }
 
-/*{schoolData.map(function(d, idx){
-    return (<li key={idx}>{d.schoolName}</li>)
-  })}*/
+
 export { Resume };

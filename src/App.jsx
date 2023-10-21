@@ -7,17 +7,19 @@ import { BasicInfo } from './BasicInfo.jsx'
 import { Resume } from './Resume.jsx'
 import { Education } from './Education'
 import { Work } from './Work'
+import { Print } from './Print'
+
 
 
 function App() {
 
 
   const [resData, setResData] = useState({
-      name: 'John Doe',
-      email: 'jdoe@gmail.com',
-      phone: '(999)999-9999',
-      address: 'Anytown, PA',
-    
+    name: 'John Doe',
+    email: 'jdoe@gmail.com',
+    phone: '(999)999-9999',
+    address: 'Anytown, PA',
+
   })
 
   const [schoolData, setSchoolData] = useState([{
@@ -28,7 +30,7 @@ function App() {
     "endDate": "2014-05-20",
     "location": "Anytown, PA",
     "id": "28946e45-f4e9-46c0-aba8-097b1643adbf"
-}])
+  }])
 
   const [workData, setWorkData] = useState([{
     "company": "AAA Inc.",
@@ -38,10 +40,10 @@ function App() {
     "wLocation": "Anytown, USA",
     "description": "Designed a REST API call in Java that allows clients to simultaneously update multiple interdependent elements",
     "id": "0a1d4557-6ad2-4ec4-80d9-63b7947f9975"
-}])
-  
+  }])
+
   //event handlers
- 
+
   const handleSchoolSubmit = (event) => {
     event.preventDefault();
     const data = Object.fromEntries(new FormData(event.target).entries());
@@ -69,7 +71,7 @@ function App() {
 
     const newData = schoolData.filter((item) => item.id == id)
     const idRem = newData[0].id
-    
+
     schoolInput.value = newData[0].schoolName
     degreeInput.value = newData[0].degree
     fosInput.value = newData[0].fos
@@ -83,12 +85,12 @@ function App() {
   }
 
 
-/*
-  const handleResChange = (event) => {
-    const name = event.target.name;
-    const value = event.target.value;
-    setResData(values => ({ ...values, [name]: value }))
-  }*/
+  /*
+    const handleResChange = (event) => {
+      const name = event.target.name;
+      const value = event.target.value;
+      setResData(values => ({ ...values, [name]: value }))
+    }*/
 
   const handleResChange = (event) => {
     const { name, value } = event.target;
@@ -149,7 +151,7 @@ function App() {
     const newWorkData = workData.filter((item) => item.id == id)
     console.log(newWorkData)
     const idRem = newWorkData[0].id
-    
+
     company.value = newWorkData[0].company
     title.value = newWorkData[0].title
     wStartDate.value = newWorkData[0].wStartDate
@@ -161,6 +163,7 @@ function App() {
     setWorkData(delWorkData);
 
   }
+
 
 
 
@@ -183,20 +186,19 @@ function App() {
       />
 
       <Work
-      workData={workData}
-      handleWorkSubmit={handleWorkSubmit}
-      handleWorkDelete={handleWorkDelete}
-      handleWorkEdit={handleWorkEdit}
+        workData={workData}
+        handleWorkSubmit={handleWorkSubmit}
+        handleWorkDelete={handleWorkDelete}
+        handleWorkEdit={handleWorkEdit}
       />
 
       <Resume
-
         data={resData}
         schoolData={schoolData}
         workData={workData}
 
       />
-
+      
 
     </div>
   )
@@ -205,5 +207,6 @@ function App() {
 
 
 }
+
 
 export default App
