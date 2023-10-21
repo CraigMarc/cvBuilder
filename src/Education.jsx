@@ -99,7 +99,9 @@ function Education(props) {
                     // onChange={handleSchoolChange}
                     />
                 </label>
+                <div className="submitContainer">
                 <input type="submit" />
+                </div>
             </form>
             </div>
         <div>

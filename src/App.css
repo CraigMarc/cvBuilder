@@ -144,6 +144,11 @@ textarea {
 
 .printButton {
   padding-top: 10px;
+  
+}
+
+.printBack {
+  background-color: #d8dae6;
 }
 
 .delete {
@@ -152,5 +157,18 @@ textarea {
 
 .edit {
   background-color: #d8dae6;
+}
+
+input[type=submit] {
+  padding:10px 15px; 
+  background-color: #d8dae6; 
+  border:0 none;
+  cursor:pointer;
+  -webkit-border-radius: 5px;
+  border-radius: 5px; 
+}
+
+.submitContainer {
+  padding-top: 15px;
 }
 

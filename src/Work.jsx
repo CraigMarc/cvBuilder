@@ -94,7 +94,9 @@ function Work(props) {
 
                         />
                     </label>
-                    <input type="submit" />
+                    <div className="submitContainer">
+                    <input className="submit" type="submit" />
+                    </div>
                 </form>
             </div>
 

@@ -205,7 +205,7 @@ function App() {
           workData={workData}
         />
         <div className="printButton">
-        <button onClick={togglePrint}>Print Resume</button>
+        <button className="printBack" onClick={togglePrint}>Print Resume</button>
         </div>
       </div>
       </div>
