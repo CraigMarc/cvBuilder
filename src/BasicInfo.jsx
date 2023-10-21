@@ -11,6 +11,7 @@ function BasicInfo(props) {
     return (
         <>
             <h2>Basic Info</h2>
+            <div className="basicContainer">
             <label>
                 First name:{' '}
                 <input
@@ -49,7 +50,7 @@ function BasicInfo(props) {
                     onChange={handleBasicChange}
                 />
             </label>
-
+            </div>
         </>
     );
 }

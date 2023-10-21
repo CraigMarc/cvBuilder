@@ -52,3 +52,26 @@ p {
   padding-top: 50px;
   
 }
+
+.appContainer {
+
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+
+}
+
+.basicContainer
+{
+ display: flex;
+ flex-wrap: wrap;
+ justify-content: center;
+ text-align: center;
+}
+
+input {
+  display: block;
+}
+
+h2 {
+  text-align: center;
+}

@@ -42,7 +42,7 @@ function App() {
     "id": "0a1d4557-6ad2-4ec4-80d9-63b7947f9975"
   }])
 
-  const [print, setPrint] = useState('false')
+  const [print, setPrint] = useState("false")
 
 
   //event handlers
@@ -88,13 +88,6 @@ function App() {
   }
 
 
-  /*
-    const handleResChange = (event) => {
-      const name = event.target.name;
-      const value = event.target.value;
-      setResData(values => ({ ...values, [name]: value }))
-    }*/
-
   const handleResChange = (event) => {
     const { name, value } = event.target;
     setResData({ ...resData, [name]: value });
@@ -111,9 +104,7 @@ function App() {
     const id = event.target.value;
 
     addAllInputs(id)
-    //const newData = schoolData.filter((item) => item.id !== id)
-    //setSchoolData(newData);
-
+    
   }
 
   const handleWorkSubmit = (event) => {
@@ -138,8 +129,7 @@ function App() {
     const id = event.target.value;
 
     addWorkInputs(id)
-    //const newData = schoolData.filter((item) => item.id !== id)
-    //setSchoolData(newData);
+    
 
   }
 
@@ -175,18 +165,18 @@ function App() {
     const btn = document.getElementById("printButton");
     btn.style.display = "none";
     window.print()
-    setPrint('false')
+    setPrint("false")
   };
 
 
   //return components
 
-  if (print == 'false') {
+  if (print == "false") {
 
     return (
 
-      <div>
-
+      <div className="appContainer">
+        <div>
         <BasicInfo
           basicData={resData}
           handleBasicChange={handleResChange}
@@ -207,15 +197,15 @@ function App() {
           handleWorkDelete={handleWorkDelete}
           handleWorkEdit={handleWorkEdit}
         />
-
+        </div>
+        <div>
         <Resume
           data={resData}
           schoolData={schoolData}
           workData={workData}
-
         />
         <button onClick={togglePrint}>Print Resume</button>
-
+      </div>
       </div>
 
     )

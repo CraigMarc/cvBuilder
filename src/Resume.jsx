@@ -3,7 +3,7 @@ import phone from './assets/phone.svg';
 import location from './assets/location.png';
 import React from 'react'
 
-//const Resume = React.forwardRef((props, ref) => {
+
 
 function Resume(props) {
 
