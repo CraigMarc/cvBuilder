@@ -8,7 +8,7 @@ import React from 'react'
 function Resume(props) {
 
     const {
-        
+        handlePrint,
         data,
         schoolData,
         workData,
@@ -50,11 +50,13 @@ function Resume(props) {
         </div>
 
     )
+
+    
     
 
     return (
        
-        <div /*ref={ref}*/>
+        <div>
             <header>
 
                 <h1>{data.name}</h1>
@@ -80,7 +82,7 @@ function Resume(props) {
             </div>
 
 
-      
+            
             
           </div>
 

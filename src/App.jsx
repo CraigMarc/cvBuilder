@@ -42,6 +42,9 @@ function App() {
     "id": "0a1d4557-6ad2-4ec4-80d9-63b7947f9975"
   }])
 
+  const [print, setPrint] = useState('false')
+
+
   //event handlers
 
   const handleSchoolSubmit = (event) => {
@@ -164,45 +167,73 @@ function App() {
 
   }
 
+  const togglePrint = (event) => {
+    setPrint('true')
+  };
 
+  const handlePrint = (event) => {
+    window.print()
+    setPrint('false')
+  };
 
 
   //return components
-  return (
-    <div>
 
-      <BasicInfo
-        basicData={resData}
-        handleBasicChange={handleResChange}
+  if (print == 'false') {
 
-      />
+    return (
 
-      <Education
-        schoolData={schoolData}
-        handleSchoolChange={handleResChange}
-        handleSchoolSubmit={handleSchoolSubmit}
-        handleDelete={handleDelete}
-        handleEdit={handleEdit}
-      />
+      <div>
 
-      <Work
-        workData={workData}
-        handleWorkSubmit={handleWorkSubmit}
-        handleWorkDelete={handleWorkDelete}
-        handleWorkEdit={handleWorkEdit}
-      />
+        <BasicInfo
+          basicData={resData}
+          handleBasicChange={handleResChange}
 
-      <Resume
-        data={resData}
-        schoolData={schoolData}
-        workData={workData}
+        />
 
-      />
-      
+        <Education
+          schoolData={schoolData}
+          handleSchoolChange={handleResChange}
+          handleSchoolSubmit={handleSchoolSubmit}
+          handleDelete={handleDelete}
+          handleEdit={handleEdit}
+        />
 
-    </div>
-  )
+        <Work
+          workData={workData}
+          handleWorkSubmit={handleWorkSubmit}
+          handleWorkDelete={handleWorkDelete}
+          handleWorkEdit={handleWorkEdit}
+        />
 
+        <Resume
+          data={resData}
+          schoolData={schoolData}
+          workData={workData}
+          
+        />
+      <button onClick={togglePrint}>Print Resume</button>
+
+      </div>
+
+    )
+
+  }
+
+  if (print == "true") {
+    return (
+
+      <div>
+        <Print
+          data={resData}
+          schoolData={schoolData}
+          workData={workData}
+          handlePrint={handlePrint}
+        />
+      </div>
+    )
+
+  }
 
 
 
