@@ -30,7 +30,7 @@ function Work(props) {
             <div className="workContainer">
                 <form onSubmit={handleWorkSubmit}>
                     <label>
-                        Company:{' '}
+                        Company {' '}
                         <input
                             id="company"
                             type="text"
@@ -41,7 +41,7 @@ function Work(props) {
                         />
                     </label>
                     <label>
-                        Title/Position:{' '}
+                        Title/Position {' '}
                         <input
                             id="title"
                             type="text"
@@ -55,7 +55,7 @@ function Work(props) {
 
 
                     <label>
-                        Start Date:{' '}
+                        Start Date {' '}
                         <input
                             id="wStartDate"
                             type="date"
@@ -64,7 +64,7 @@ function Work(props) {
                         />
                     </label>
                     <label>
-                        End Date:{' '}
+                        End Date {' '}
                         <input
                             id="wEndDate"
                             type="date"
@@ -74,7 +74,7 @@ function Work(props) {
                     </label>
 
                     <label>
-                        Location:{' '}
+                        Location {' '}
                         <input
                             id="wLocation"
                             type="text"
@@ -85,7 +85,7 @@ function Work(props) {
                     </label>
 
                     <label>
-                        Description:{' '}
+                        Description {' '}
                         <textarea
                             id="description"
                             type="textarea"

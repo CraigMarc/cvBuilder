@@ -31,7 +31,7 @@ function Education(props) {
             <div className="educationContainer">
             <form id="edForm" onSubmit={handleSchoolSubmit}>
                 <label>
-                    School Name:{' '}
+                    School Name {' '}
                     <input
                         id="schoolName"
                         type="text"
@@ -42,7 +42,7 @@ function Education(props) {
                     />
                 </label>
                 <label>
-                    Degree:{' '}
+                    Degree {' '}
                     <input
                         id="degree"
                         type="text"
@@ -54,7 +54,7 @@ function Education(props) {
                 </label>
 
                 <label>
-                    Field of Study:{' '}
+                    Field of Study {' '}
                     <input
                         id="fos"
                         type="text"
@@ -65,7 +65,7 @@ function Education(props) {
                 </label>
 
                 <label>
-                    Start Date:{' '}
+                    Start Date {' '}
                     <input
                         id="startDate"
                         type="date"
@@ -74,7 +74,7 @@ function Education(props) {
                     />
                 </label>
                 <label>
-                    End Date:{' '}
+                    End Date {' '}
                     <input
                         id="endDate"
                         type="date"
@@ -84,7 +84,7 @@ function Education(props) {
                 </label>
 
                 <label>
-                    Location:{' '}
+                    Location {' '}
                     <input
                         id="location"
                         type="text"

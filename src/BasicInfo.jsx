@@ -13,7 +13,7 @@ function BasicInfo(props) {
             <h2>Basic Info</h2>
             <div className="basicContainer">
             <label>
-                First name:{' '}
+                First name {' '}
                 <input
                     type="text"
                     value={basicData.name }
@@ -22,7 +22,7 @@ function BasicInfo(props) {
                 />
             </label>
             <label>
-                Email:{' '}
+                Email {' '}
                 <input
                     type="email"
                     value={basicData.email }
@@ -32,7 +32,7 @@ function BasicInfo(props) {
             </label>
 
             <label>
-                Phone:{' '}
+                Phone {' '}
                 <input
                     type="phone"
                     value={basicData.phone }
@@ -42,7 +42,7 @@ function BasicInfo(props) {
             </label>
 
             <label>
-                Address:{' '}
+                Address {' '}
                 <input
                     type="text"
                     value={basicData.address }

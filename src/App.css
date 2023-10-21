@@ -1,5 +1,3 @@
-
-
 header {
   text-align: center;
   background-color: #F5F5F5;
@@ -20,13 +18,14 @@ header {
   width: 25px;
 }
 
-.schoolContainer {
+.schoolResume {
  
   display: grid;
   grid-template-columns: 2fr 4fr;
   margin-left: 60px;
   margin-right: 60px;
   padding-top: 20px;
+  text-align: left;
 }
 
 h3 {
@@ -36,13 +35,14 @@ h3 {
   text-align: center;
 }
 
-.workContainer {
+.workResume {
  
   display: grid;
   grid-template-columns: 2fr 4fr;
   margin-left: 60px;
   margin-right: 60px;
   padding-top: 20px;
+  text-align: left;
 }
 
 p {
@@ -72,7 +72,8 @@ p {
  display: flex;
  flex-wrap: wrap;
  justify-content: center;
- text-align: center;
+ 
+ gap: 20px;
 }
 
 input {
@@ -178,4 +179,3 @@ input[type=submit] {
 .submitContainer {
   padding-top: 15px;
 }
-

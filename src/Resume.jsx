@@ -20,7 +20,7 @@ function Resume(props) {
 
     const arrayDataItems = schoolData.map(data =>
         <div key={data.id}>
-            <div className="schoolContainer">
+            <div className="schoolResume">
             <div>
             <p>{data.startDate} - {data.endDate}</p>
             <p>{data.location}</p>
@@ -35,7 +35,7 @@ function Resume(props) {
     )
 
     const arrayWorkItems = workData.map(data =>
-      <div key={data.id} className="workContainer">
+      <div key={data.id} className="workResume">
             
             <div>
             <p>{data.wStartDate} - {data.wEndDate}</p>
