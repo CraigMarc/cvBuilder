@@ -13,10 +13,11 @@ function Work(props) {
 
     const listWork = workData.map(data =>
         <div key={data.id}>
-            <p className="title">Company: {data.company}   Title: {data.title}</p>
+            <p className="title">{data.company}</p>
+            
             <div className="buttonContainer">
-            <button value={data.id} onClick={handleWorkDelete}>delete</button>
-            <button value={data.id} onClick={handleWorkEdit}>edit</button>
+            <button className="delete" value={data.id} onClick={handleWorkDelete}>delete</button>
+            <button className="edit" value={data.id} onClick={handleWorkEdit}>edit</button>
             </div>
         </div>
 

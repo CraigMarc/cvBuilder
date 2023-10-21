@@ -13,7 +13,7 @@ function Education(props) {
 
         const listSchools = schoolData.map(data =>
             <div key={data.id}>
-                <p className="title">School Name: {data.schoolName}   Degree: {data.degree}</p>
+                <p className="title">{data.schoolName}</p>
                 
                 <div className="buttonContainer">
                 <button className="delete" value={data.id} onClick={handleDelete}>delete</button>

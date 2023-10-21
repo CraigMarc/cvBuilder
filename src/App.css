@@ -3,6 +3,9 @@
 header {
   text-align: center;
   background-color: #F5F5F5;
+  padding-left: 10px;
+  padding-right: 10px;
+ padding-top: 5px;
 }
 
 .container {
@@ -45,6 +48,7 @@ p {
 
 .work {
   padding-top: 50px;
+  padding-bottom: 30px;
  
 }
 
@@ -106,6 +110,7 @@ label {
   display: flex;
   justify-content: center;
   gap: 10px;
+  padding-top: 5px;
 }
 
 .workContainer
@@ -140,3 +145,12 @@ textarea {
 .printButton {
   padding-top: 10px;
 }
+
+.delete {
+  background-color: #d8dae6;
+}
+
+.edit {
+  background-color: #d8dae6;
+}
+
