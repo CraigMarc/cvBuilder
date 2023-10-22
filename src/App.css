@@ -185,7 +185,7 @@ textarea {
 .edit {
   background-color: #d8dae6;
 }
-
+/*
 input[type=submit] {
   padding:10px 15px; 
   background-color: #d8dae6; 
@@ -193,6 +193,28 @@ input[type=submit] {
   cursor:pointer;
   -webkit-border-radius: 5px;
   border-radius: 5px; 
+  transition: border-color 0.25s;
+}*/
+input[type=submit] {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1why window print centers my document.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+ 
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+
+
+
+input[type=submit]:hover {
+  border-color: #646cff;
+}
+input[type=submit]:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
 }
 
 .submitContainer {
