@@ -60,8 +60,9 @@ function App() {
 
   function clearAllInputs() {
     let allInputs = document.querySelectorAll('input');
+    let textArea = document.querySelector('textarea')
     allInputs.forEach(singleInput => singleInput.value = '');
-
+    textArea.value = ''
   }
 
   function addAllInputs(id) {
