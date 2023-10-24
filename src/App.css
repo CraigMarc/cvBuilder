@@ -25,13 +25,14 @@ header {
   display: flex;
   justify-content: space-evenly;
   gap: 5px;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
 
 }
 .basicCont {
   display: flex;
   gap: 10px;
   align-items: center;
+  
 }
 
 .locImg {
