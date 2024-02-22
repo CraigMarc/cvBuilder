@@ -51,7 +51,10 @@ function Print(props) {
 
     )
 
-    
+    function handleCheckout (e) {
+        
+
+    }
     
 
     return (

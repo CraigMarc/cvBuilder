@@ -17,7 +17,7 @@ function Education(props) {
                 
                 <div className="buttonContainer">
                 <button className="delete" value={data.id} onClick={handleDelete}>delete</button>
-                <button className="edit" value={data.id} onClick={handleEdit}>edit</button>
+                
                 </div>
                 
             </div>
